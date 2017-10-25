@@ -29,9 +29,12 @@ public class WebTest {
     public void testEasy() throws Exception {
 
         driver.manage().timeouts().implicitlyWait(100, SECONDS );
-        driver.get("https://alan-elabor8-dev-ed.lightning.force.com/one/one.app#/n/ContactListTab");
+//        driver.get("https://alan-elabor8-dev-ed.lightning.force.com/one/one.app#/n/ContactListTab");
+//        driver.findElement(By.id("username")).sendKeys("alan@elabor8.com.au");
 
-        driver.findElement(By.id("username")).sendKeys("alan@elabor8.com.au");
+        driver.get("https://alan2-elabor8-dev-ed.lightning.force.com/one/one.app#/n/ContactListTab");
+        driver.findElement(By.id("username")).sendKeys("alan.elabor8.dev@gmail.com");
+
         driver.findElement(By.id("password")).sendKeys("e8techuser");
         driver.findElement(By.id("Login")).click();
 
@@ -47,8 +50,6 @@ public class WebTest {
         Assert.assertTrue("NEW MENU ITEM not found", foundItem);
     }
 
-
-
     @BeforeClass
     public static void beforeTest() {
         boolean useChrome = Boolean.parseBoolean(System.getProperty("useChrome"));
@@ -57,7 +58,7 @@ public class WebTest {
         if (useChrome) {
             driver = new ChromeDriver();
         } else {
-            //File file = new File("/Users/alanmangroo/phantomjs/phantomjs-2.1.1-macosx/bin/phantomjs");
+//            File file = new File("/Users/alanmangroo/phantomjs/phantomjs-2.1.1-macosx/bin/phantomjs");
             File file = new File("/home/alan/phantomjs/phantomjs-2.1.1-linux-x86_64/bin/phantomjs");
             System.setProperty("phantomjs.binary.path", file.getAbsolutePath());
             driver = new PhantomJSDriver();
