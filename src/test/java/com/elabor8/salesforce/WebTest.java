@@ -44,10 +44,10 @@ public class WebTest {
         boolean foundItem = false;
         for (WebElement we : options) {
             System.out.println("Options:" + we.getText());
-            if (we.getText().equals("NEW MENU ITEM")) foundItem = true;
+            if (we.getText().equals("THE INTERNET")) foundItem = true;
         }
         System.out.println(foundItem);
-        Assert.assertTrue("NEW MENU ITEM not found", foundItem);
+        Assert.assertTrue("THE INTERNET not found", foundItem);
     }
 
     @BeforeClass
