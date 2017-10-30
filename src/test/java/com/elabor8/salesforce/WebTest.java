@@ -1,9 +1,5 @@
 package com.elabor8.salesforce;
 
-
-
-
-import com.gargoylesoftware.htmlunit.BrowserVersion;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -59,7 +55,8 @@ public class WebTest {
             driver = new ChromeDriver();
         } else {
 //            File file = new File("/Users/alanmangroo/phantomjs/phantomjs-2.1.1-macosx/bin/phantomjs");
-            File file = new File("/home/alan/phantomjs/phantomjs-2.1.1-linux-x86_64/bin/phantomjs");
+            File file = new File("/home/ec2-user/phantomjs/phantomjs-2.1.1-linux-x86_64/bin");
+//            File file = new File("/home/alan/phantomjs/phantomjs-2.1.1-linux-x86_64/bin/phantomjs");
             System.setProperty("phantomjs.binary.path", file.getAbsolutePath());
             driver = new PhantomJSDriver();
         }
